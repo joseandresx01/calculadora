@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript calculadora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body style="background-color: rgb(24, 32, 51)">
+    <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;margin-top: 150px;"
+        class="container-fluid">
+        <div style="height: 400px;" class="row">
+            <div style="background-color: rgb(57, 71, 100);border-radius: 18px;-webkit-box-shadow: 0px 0px 6px 6px rgba(80,159,199,1);
+            -moz-box-shadow: 0px 0px 6px 6px rgba(80,159,199,1);
+            box-shadow: 0px 0px 6px 6px rgba(80,159,199,1);" class="col">
+                <h2
+                    style="display: flex;justify-content: center;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: black;">
+                    CALCULADORA</h2>
+                <hr style="color: black;">
+                <div style="margin-top: 50px;">
+                    <input style="border-radius: 10px;" type="text" class="numero1" />
+                    <input style="border-radius: 10px;" type="text" class="numero2" />
+                    <h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        display: flex;justify-content: center;background-color: rgb(91, 105, 142);
+                        margin-top: 30px;border-radius: 6px;color: white;">
+                    </h1>
+                    <div style="display: flex;justify-content: center;gap: 15px;margin-top: 60px;" class="botones">
+                        <button
+                            style="background-color: rgb(91, 105, 142);color: white;padding: 20px;border-radius: 15px;border-color: white;"
+                            class="boton">+</button>
+                        <button
+                            style="background-color: rgb(91, 105, 142);color: white;padding: 22px;border-radius: 15px;border-color: white;"
+                            class="boton2">-</button>
+                        <button
+                            style="background-color: rgb(91, 105, 142);color: white;padding: 22px;border-radius: 15px;border-color: white;"
+                            class="boton3">x</button>
+                        <button
+                            style="background-color: rgb(91, 105, 142);color: white;padding: 20px;border-radius: 15px;border-color: white;"
+                            class="boton4">÷</button>
+                    </div>
+                </div>
+
+
+                <script>
+
+                    const numero1 = $(".numero1");
+                    const boton = $(".boton");
+                    const boton2 = $(".boton2");
+                    const boton3 = $(".boton3");
+                    const boton4 = $(".boton4");
+                    const resultado = $("h1");
+
+                    const numero2 = $(".numero2");
+                    const resultado2 = $("h1");
+
+
+                    function sumar(a, b) {
+                        return a + b
+                    }
+
+                    function suma(numero1, numero2) {
+                        let proceso = numero1 + numero2
+                        return proceso
+                    }
+
+
+                    function restar(a, b) {
+                        return a - b
+                    }
+                    function resta(numero1, numero2) {
+                        let proceso = numero1 - numero2
+                        return proceso
+                    }
+
+                    function multiplicar(a, b) {
+                        return a * b
+                    }
+                    function multiplicacion(numero1, numero2) {
+                        let proceso = numero1 * numero2
+                        return proceso
+                    }
+
+                    function dividir(a, b) {
+                        return a / b
+                    }
+                    function division(numero1, numero2) {
+                        let proceso = numero1 / numero2
+                        return proceso
+                    }
+
+
+
+                    boton.click(function () {
+                        resultado.html("la suma es:" + sumar(parseInt(numero1.val()), Number(numero2.val())))
+                    });
+                    boton2.click(function () {
+                        resultado.html("la resta es:" + restar(parseInt(numero1.val()), Number(numero2.val())))
+                    });
+                    boton3.click(function () {
+                        resultado.html("la multiplicacion es:" + multiplicar(parseInt(numero1.val()), Number(numero2.val())))
+                    });
+                    boton4.click(function () {
+                        resultado.html("la division es:" + dividir(parseInt(numero1.val()), Number(numero2.val())))
+                    });
+
+                    let peliculas = ["American Psyco", "Cars", "La caida del cisne negro", "Dune"];
+                    console.log(peliculas[0], peliculas[3])
+                    let marcas = ["Mercedes", "Mazda", "Lamborghini", "Jeep"];
+                    console.log(marcas[0], marcas[3])
+                    let deportes = ["Futbol", "Volleyball", "Ciclismo", "Beisbol"];
+                    console.log(deportes[0], deportes[3])
+                    let celulares = ["Xiaomi", "Samsung", "Iphone", "Motorola"];
+                    console.log(celulares[0], celulares[3])
+                    let paises = ["Argentina", "Colombia", "Brasil", "Peru"];
+                    console.log(paises[0], paises[3])
+
+
+                    // for (let i = 1; i <= 3; i = i + 1) {
+                    //     console.log(peliculas[i])
+                    // }
+
+                </script>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
